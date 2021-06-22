@@ -108,7 +108,12 @@ icons.forEach ((icon)=>{
     const { family, prefix, name } = icon;
     outputHtml.innerHTML += `
         <div class="icon-card col">
-            <i class="${family} ${prefix}${name}"></i>
+            <div class="icon-card-inner">
+                    <i class="${family} ${prefix}${name}"></i>
+                    <br>
+                    <span>${name}</span>
+            </div>
+            
         </div>
     `;
 });
