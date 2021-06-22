@@ -109,6 +109,33 @@ Coloriamo le icone per tipo
 Creiamo una select con i tipi di icone e usiamola per filtrare le icone
 */
 
+// Creazione funzione, che crei un'altra array e che la richiami 
+// in base alla scelta dell'utente:
+
+/**
+ * 
+ * L'obbiettivo della funzione è di filtrare gli elemnti dentro a delle nuove
+ * array e controllare quali stampare:
+ * @param {*} scelta 
+ * @param {*} originalList 
+ * @returns 
+ */
+function filteredIcons (scelta, originalList) {
+    return newArray = originalList.filter((element) => {
+        // Ora ritorna true solo se è presente nel filtro:
+        if(scelta === 'all') {
+            return true;
+        }
+        if (scelta === element.type){  // Occhio, da controllare element.type;
+            return true;
+        }
+        // Se non si verifica la condizione allora non deve fare niente
+        return false; 
+
+    });
+}
+
+
 let outputHtml = document.querySelector('.items-js-content');
 
 // Per prima cosa serve un forEach per prendere i valori della struttura dati:
