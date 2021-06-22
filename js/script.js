@@ -105,9 +105,10 @@ let outputHtml = document.querySelector('.items-js-content');
 // Per prima cosa serve un forEach per prendere i valori della struttura dati:
 icons.forEach ((icon)=>{
     // Con la destructurin prelevo i dati di cui ho bisogno:
-    const {family, prefix, name} = icon;
+    const { family, prefix, name } = icon;
     outputHtml.innerHTML += `
-        <div class="icon"><i class="${family} ${prefix}${name}"</i></div>
+        <div class="icon-card col">
+            <i class="${family} ${prefix}${name}"></i>
+        </div>
     `;
-    console.log(outputHtml);
 });
