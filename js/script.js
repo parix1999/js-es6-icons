@@ -101,15 +101,21 @@ Partendo dalla seguente struttura dati , mostriamo in pagina tutte
 le icone disponibili come da layout.
 */
 
+/* MileStone 2:
+Coloriamo le icone per tipo
+*/
+
 let outputHtml = document.querySelector('.items-js-content');
+
+
 // Per prima cosa serve un forEach per prendere i valori della struttura dati:
 icons.forEach ((icon)=>{
     // Con la destructurin prelevo i dati di cui ho bisogno:
-    const { family, prefix, name } = icon;
+    const { family, prefix, name, type} = icon;
     outputHtml.innerHTML += `
         <div class="icon-card col">
             <div class="icon-card-inner">
-                    <div class ="icon">
+                    <div class ="icon ${type}">
                         <i class="${family} ${prefix}${name}"></i>
                     </div>
                     <div class="name">
