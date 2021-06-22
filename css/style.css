@@ -23,11 +23,19 @@
     flex-wrap: wrap;
 }
 .icon-card-inner .icon{
-    width:100%;
-    
+    width:100%;    
 }
 .icon-card-inner .name{
     text-transform: uppercase;
     font-size:12px;
     width:100%;
+}
+.animal{
+    color:blue;
+}
+.vegetable{
+    color:orange;
+}
+.user{
+    color:purple;
 }
