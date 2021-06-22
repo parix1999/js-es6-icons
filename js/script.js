@@ -109,9 +109,12 @@ icons.forEach ((icon)=>{
     outputHtml.innerHTML += `
         <div class="icon-card col">
             <div class="icon-card-inner">
-                    <i class="${family} ${prefix}${name}"></i>
-                    <br>
-                    <span class="name">${name}</span>
+                    <div class ="icon">
+                        <i class="${family} ${prefix}${name}"></i>
+                    </div>
+                    <div class="name">
+                        ${name}
+                    </div>
             </div>
 
         </div>
