@@ -111,9 +111,9 @@ icons.forEach ((icon)=>{
             <div class="icon-card-inner">
                     <i class="${family} ${prefix}${name}"></i>
                     <br>
-                    <span>${name}</span>
+                    <span class="name">${name}</span>
             </div>
-            
+
         </div>
     `;
 });
