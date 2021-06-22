@@ -107,7 +107,6 @@ Coloriamo le icone per tipo
 
 let outputHtml = document.querySelector('.items-js-content');
 
-
 // Per prima cosa serve un forEach per prendere i valori della struttura dati:
 icons.forEach ((icon)=>{
     // Con la destructurin prelevo i dati di cui ho bisogno:
