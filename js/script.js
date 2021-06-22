@@ -105,6 +105,10 @@ le icone disponibili come da layout.
 Coloriamo le icone per tipo
 */
 
+/* MileStone 3:
+Creiamo una select con i tipi di icone e usiamola per filtrare le icone
+*/
+
 let outputHtml = document.querySelector('.items-js-content');
 
 // Per prima cosa serve un forEach per prendere i valori della struttura dati:
