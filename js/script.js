@@ -96,3 +96,18 @@ const icons = [
 		family: 'fas'
 	}
 ];
+/* MileStone 1:
+Partendo dalla seguente struttura dati , mostriamo in pagina tutte 
+le icone disponibili come da layout.
+*/
+
+let outputHtml = document.querySelector('.items-js-content');
+// Per prima cosa serve un forEach per prendere i valori della struttura dati:
+icons.forEach ((icon)=>{
+    // Con la destructurin prelevo i dati di cui ho bisogno:
+    const {family, prefix, name} = icon;
+    outputHtml.innerHTML += `
+        <div class="icon"><i class="${family} ${prefix}${name}"</i></div>
+    `;
+    console.log(outputHtml);
+});
