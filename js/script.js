@@ -121,7 +121,7 @@ Creiamo una select con i tipi di icone e usiamola per filtrare le icone
  * @returns 
  */
 function filteredIcons (scelta, originalList) {
-    return newArray = originalList.filter((element) => {
+    return originalList.filter((element) => {
         // Ora ritorna true solo se è presente nel filtro:
         if(scelta === 'all') {
             return true;
@@ -138,21 +138,33 @@ function filteredIcons (scelta, originalList) {
 
 let outputHtml = document.querySelector('.items-js-content');
 
-// Per prima cosa serve un forEach per prendere i valori della struttura dati:
-icons.forEach ((icon)=>{
-    // Con la destructurin prelevo i dati di cui ho bisogno:
-    const { family, prefix, name, type} = icon;
-    outputHtml.innerHTML += `
-        <div class="icon-card col">
-            <div class="icon-card-inner">
-                    <div class ="icon ${type}">
-                        <i class="${family} ${prefix}${name}"></i>
-                    </div>
-                    <div class="name">
-                        ${name}
-                    </div>
-            </div>
+function listIconsToHTML (filter) {
+    const iconfiltered = filteredIcons(filter, icons);
 
-        </div>
-    `;
-});
+
+    // Per prima cosa serve un forEach per prendere i valori della struttura dati:
+    iconfiltered.forEach ((icon)=>{
+        // Con la destructurin prelevo i dati di cui ho bisogno:
+        const { family, prefix, name, type} = icon;
+        outputHtml.innerHTML += `
+            <div class="icon-card col">
+                <div class="icon-card-inner">
+                        <div class ="icon ${type}">
+                            <i class="${family} ${prefix}${name}"></i>
+                        </div>
+                        <div class="name">
+                            ${name}
+                        </div>
+                </div>
+    
+            </div>
+        `;
+    });
+}
+listIconsToHTML('all');
+
+const selectElement = document.querySelector('.type-selector');
+
+selectElement.addEventListener('change', (event) => {
+    listIconsToHTML(event.target.value);
+})
