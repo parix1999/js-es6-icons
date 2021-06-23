@@ -136,12 +136,12 @@ function filteredIcons (scelta, originalList) {
 }
 
 
-let outputHtml = document.querySelector('.items-js-content');
 
 function listIconsToHTML (filter) {
     const iconfiltered = filteredIcons(filter, icons);
-
-
+    
+    let outputHtml = document.querySelector('.items-js-content');
+    outputHtml.innerHTML = '';
     // Per prima cosa serve un forEach per prendere i valori della struttura dati:
     iconfiltered.forEach ((icon)=>{
         // Con la destructurin prelevo i dati di cui ho bisogno:
